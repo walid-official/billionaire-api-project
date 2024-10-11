@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="w-11/12 mx-auto">
-        <section class="flex px-8">
+        <section class="lg:flex gap-5">
 
-            <div class="bg-[#0E1B34] px-12 py-6 w-[25%]">
+            <div class="bg-[#0E1B34] px-12 py-6 lg:w-[25%]">
 
                 <div class="flex justify-center">
                     <img class="my-4 mb-8 w-32" src="images/logo/logo.svg" alt="">
@@ -20,10 +20,10 @@
 
                <div class="py-16">
                 <div class="space-y-4">
-                    <button class="btn block text-[#0E1B34] font-bold w-full">Add a user</button>
+                    <button onclick="loadAllForbes()" class="btn block text-[#0E1B34] font-bold w-full">Add a user</button>
                     <button class="btn block text-[#0E1B34] font-bold w-full">Double Money</button>
-                    <button class="btn block text-[#0E1B34] font-bold w-full">Sort By Rank</button>
-                    <button class="btn block text-[#0E1B34] font-bold w-full">Calculate Entire Wealth</button>
+                    <button id="sortedWealth" class="btn block text-[#0E1B34] font-bold w-full">Sort By Rank</button>
+                    <button id="calculate" class="btn block text-[#0E1B34] font-bold w-full">Calculate Entire Wealth</button>
                 </div>
 
                 <div class="my-4 flex justify-center">
@@ -39,7 +39,7 @@
 
             </div>  <!-- Button Section End -->
            
-            <div class="w-[75%]">
+            <div class="lg:w-[75%]">
 
                 <div class="flex justify-between border py-4 px-8">
                     <div class="flex items-center">
@@ -51,43 +51,43 @@
                 </div>
 
                 <div class="">
-                    <div class="bg-[#D9D9D9] p-10">
+                   <div class="bg-[#D9D9D9]">
                         <h2 class="text-xl font-bold mb-6">Hello Users!</h2>
                         <table class="table">
                           <!-- head -->
-                          <thead>
-                            <tr>
-                              <th>Serial</th>
-                              <th>Name</th>
-                              <th>Citizenship</th>
-                              <th>Industry</th>
-                              <th>Rank</th>
-                              <th>Wealth</th>
+                          <thead class="space-x-4">
+                            <tr class="">
+                              <th class="px-4">Name</th>
+                              <th class="px-4">Citizenship</th>
+                              <th class="px-4">Industry</th>
+                              <th class="px-4">Rank</th>
+                              <th class="px-4">Wealth</th>
                             </tr>
                            
                           </thead>
                           <hr>
-                          <tbody>
+                          <tbody id="table-container">
                             <!-- row 1 -->
-                            <tr class="">
+                            <!-- <tr class="">
                               <th>1</th>
                               <td>Cy Ganderton <i class="fa-solid fa-eye"></i></td>
                               <td>Quality Control Specialist</td>
                               <td>Blue</td>
                               <td>Blue</td>
                               <td>Blue</td>
-                            </tr>
+                            </tr> -->
                           </tbody>
                         </table>
                         <div class="flex justify-between border-t border-[#000]">
                             <h2 class="pt-4 text-xl font-bold">Total</h2>
-                            <p class="pt-4 pr-8">$2000</p>
+                            <p id="total" class="pt-4 pr-8">$000</p>
                         </div>  
                     </div>
                 </div>
             </div>  <!-- Table Section End -->
-           
         </section>
     </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
